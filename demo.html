@@ -1,0 +1,69 @@
+<!--#########################################################################-->
+<!--######  Author: Andres Zibula                                      ######-->
+<!--######  Source: https://github.com/andres-zibula/js-cars-ga-demo   ######-->
+<!--#########################################################################-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Genetic Algorithm Demo</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="width: 500px; margin: auto;">
+        <canvas id="idCanvas" width="500" height="500"></canvas>
+        <label>Draw</label>
+        <input type="checkbox" id="drawCheckbox" checked="checked">
+        <br/>
+        <label>Run</label>
+        <input type="checkbox" id="runCheckbox" checked="checked">
+        <br/>
+        <label>Speed</label>
+        <select id="speedDropdown">
+            <option value="1">1</option>
+            <option value="10" selected>10</option>
+            <option value="100">100</option>
+            <option value="1000">1000</option>
+        </select>
+        <br/>
+        <br/>
+        <button id="jump" onclick="jumpFunction()">Jump 50 generations</button>
+        <br/>
+        <br/>
+        <label>Black tile: wall</label>
+        <br/>
+        <label>Green tile: grass</label>
+        <br/>
+        <label>Gray tile: road</label>
+        <br/>
+        <br/>
+        <label>It is a bit random, if the results are bad in later generations => refresh the page to restart the genes randomly.</label>
+    </div>
+    
+    <script src="demo.js"></script>
+</body>
+
+</html>
